@@ -74,6 +74,35 @@ body {
     color: hsl(0, 0%, 100%);
     text-decoration: none;
 }
+.firework{
+    position : absolute;
+    top : 50%;
+    left: 50%;
+    transform: Translate(-50%, -50%);
+    width: 0.5vmin;
+    aspect-ratio: 1;
+    background:
+      /* Bbackground intentionally blank */
+      ;
+    background-size: 0.5vmin 0.5vmin;
+    background-repeat: No-repeat;
+  }
+ .firework{
+     animation: firework 2s infinite;
+     ...
+  }
+.firework,
+.firework::before,
+.firework::after {
+     content: "";
+     ...
+}
+.firework::before{
+     transform: translate(-50%, -50%) rotate(25deg) !important
+}
+.firework::after{
+    transform: translate(-50%, -50%) rotate(-35deg) !important
+}
 
 /*------------------------------------------------------------
 ### site-navigation
